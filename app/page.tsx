@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { RedirectType, redirect } from "next/navigation";
 
 export default function Home() {
-  return <div>Hello World</div>;
+  redirect("/home", RedirectType.replace);
+  return <div>home</div>;
 }
