@@ -40,14 +40,14 @@ export default function HomeCarousel({ images }: { images: Categorie[] }) {
           {images.map((categorie, index) => (
             <CarouselItem
               key={index}
-              className="flex items-center justify-center w-full"
+              className="flex items-center justify-center min-h-64 w-full relative"
             >
               <Image
                 src={categorie.image}
                 alt={categorie.name}
-                style={{ height: "200px" }}
-                width={width}
-                height={100}
+                sizes="100vw"
+                fill
+                style={{ width: "100%", objectFit: "fill" }}
               />
             </CarouselItem>
           ))}
